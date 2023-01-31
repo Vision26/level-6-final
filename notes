@@ -1,0 +1,28 @@
+--setting up new project server---
+open up terminal(ubuntu)
+cd into specific folder where new project will be placed
+mkdir name-of-project (type this format in terminal)
+code .
+press ctrl + shift + backtick(`)key
+type 'npm init -y'
+opens up 'package.json'
+go down the list, look key prop 'main:' change value to "server.js"
+create component file by the name of 'server.js'
+begin setting up database
+-----------------------------------------------------------------------------------------
+follow server set up
+-----------------------------------------------------------------------------------------
+--set up te server.js---
+-npm install express
+-npm install mongoose
+-npm install morgan
+-npm install -g nodemon
+-npm install bcrypt
+-npm install dotenv
+-npm install jsonwebtoken
+-npm install express-jwt
+---------------------------------------------
+follow server.js file database structure
+---------------------------------------------------------
+follow .env file structure
+---------------------------------------------
