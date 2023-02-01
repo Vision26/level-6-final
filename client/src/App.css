@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    /* background-color: rgba(179, 137, 137, 0.6); */
+    background-image: url('https://daily.jstor.org/wp-content/uploads/2022/06/how_street_dogs_spend_their_days_1050x700.jpg');
+   height:100%;
+   width:100%;
+}
+
+.auth-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.auth-container > h1 {
+    font-size: 2em;
+    margin: 24px;
+  }
+  
+  .auth-container > p {
+    margin: 16px;
+    text-decoration: underline;
+  }
+  
+  .auth-container > form {
+    border: 1px solid #3339;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #aaa9;
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .auth-container > form > input {
+    margin: 16px 8px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .auth-container > form > button {
+    margin: 16px 8px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    background-color: black;
+}
+
+.profile-container{
+    display:flex;
+    flex-direction: column;
+    margin: 0 32px;
+}
+
+.global-container{
+    border: 1px solid rgb(182, 62, 62);
+    padding: 10px;
+    margin: 5px;
+}
