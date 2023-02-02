@@ -3,44 +3,44 @@ import AuthForm from './AuthForm'
 import { AuthContext } from './AuthContext'
 
 function Auth() {
-    //auth state
-    const [inputs, setInputs] = useState({
-        username: '',
-        password: ''
-    })
-    //toggle for button on/off
-    const [toggle, setToggle] = useState(false)
-    //accessing context from authcontext
-    const {signup, login, errMsg, resetAuthErr} = useContext(AuthContext)
-//handlechange
-    const handleChange = e => {
-        const { name, value } = e.target
-        setInputs( prev => ({
-            ...prev,
-            [ name ] : value
-        }) )
-    }
-//handle signup
-const handleSignUp = e => {
+  //auth state
+  const [inputs, setInputs] = useState({
+    username: '',
+    password: ''
+  })
+  //toggle for button on/off
+  const [toggle, setToggle] = useState(false)
+  //accessing context from authcontext
+  const { signup, login, errMsg, resetAuthErr } = useContext(AuthContext)
+  //handlechange
+  const handleChange = e => {
+    const { name, value } = e.target
+    setInputs(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+  //handle signup
+  const handleSignUp = e => {
     e.preventDefault()
     signup(inputs)
-}
-//handle login
-const handleLogin = e => {
+  }
+  //handle login
+  const handleLogin = e => {
     e.preventDefault()
     login(inputs)
-}
-//toggle on/off function
-const toggleForm = () => {
-    setToggle( prev => !prev )
+  }
+  //toggle on/off function
+  const toggleForm = () => {
+    setToggle(prev => !prev)
     resetAuthErr()
-}
-    return (
-        <div className='auth-container'>
-            <h1>Doggy Found</h1>
-            { !toggle ?
+  }
+  return (
+    <div className='auth-container'>
+      <h1>Doggy Found</h1>
+      {!toggle ?
         <>
-          <AuthForm 
+          <AuthForm
             handleChange={handleChange}
             handleSubmit={handleSignUp}
             inputs={inputs}
@@ -49,9 +49,9 @@ const toggleForm = () => {
           />
           <p onClick={toggleForm}>Already a member?</p>
         </>
-      :
+        :
         <>
-          <AuthForm 
+          <AuthForm
             handleChange={handleChange}
             handleSubmit={handleLogin}
             inputs={inputs}
@@ -61,8 +61,8 @@ const toggleForm = () => {
           <p onClick={toggleForm}>Not a member?</p>
         </>
       }
-        </div>
-    )
+    </div>
+  )
 }
 
 export default Auth

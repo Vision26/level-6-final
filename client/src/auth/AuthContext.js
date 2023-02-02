@@ -33,6 +33,7 @@ const signup = credentials => {
     })
     .catch(err => handleAuthErr(err.response.data.errMsg))
 }
+
 //set logins ready for front end
 const login = credentials => {
     axios.post('/auth/login', credentials)
@@ -74,6 +75,8 @@ const resetAuthErr = () => {
         errMsg: ""
     }))
 }
+// console.log(user)
+// console.log()
     return (
 <AuthContext.Provider value={{
     ...initState,
@@ -81,7 +84,8 @@ const resetAuthErr = () => {
     signup,
     login,
     logout,
-    resetAuthErr
+    resetAuthErr,
+    // errMsg
 }}>
     {props.children}
 </AuthContext.Provider>

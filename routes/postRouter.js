@@ -30,7 +30,7 @@ postRouter.put('/hearts/:heartId', (req, res, next) => {
     )
 })
 //get all posts by the logged in user
-postRouter.get('/allpostsbyuser/:userId', (req, res, next) => {
+postRouter.get('/postsbyuser/:userId', (req, res, next) => {
     Post.find(
         {user: req.auth._id},
         (err, getPosts) => {
@@ -76,7 +76,7 @@ postRouter.put('/update/:postId', (req, res, next) => {
                 res.status(500)
                 return next(err)
             }
-            return res.status(201).send(`${updatePost.name} updated!`)
+            return res.status(201).send(updatePost)
         }
     )
 })

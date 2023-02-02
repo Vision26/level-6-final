@@ -65,8 +65,62 @@
     margin: 0 32px;
 }
 
+.delete-btn{
+  background-color: maroon;
+  font-size: 16;
+}
+
+.edit-btn{
+  background-color:darkslategrey;
+  color: whitesmoke;
+}
+
+.add-btn{
+  background-color: cadetblue;
+}
+
+.post{
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+.hrt-btn{
+  background-color: rgb(246, 185, 185);
+  font-size: 16;
+}
+
 .global-container{
     border: 1px solid rgb(182, 62, 62);
     padding: 10px;
     margin: 5px;
+}
+
+h1{
+  margin: 5px;
+  color:rgb(38, 78, 81);
+}
+
+p{
+  margin: 5px;
+}
+
+form{
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+input{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+button{
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 16px;
 }
