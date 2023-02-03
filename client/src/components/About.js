@@ -5,50 +5,54 @@ function About() {
 
     return (
         <div className='about'>
-            <div class="about-section">
+            <div className="about-section">
                 <h1>About Us</h1>
                 <p>Hello fellow pet parents! We are Doggy Found!</p>
                 <p>We do, what we do for our pets.</p>
             </div>
 
-            <h2 style={{"text-align":"center"}}>Our Team</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        {/* <img src="/w3images/team1.jpg" alt="Jane" style={{width:"100%"}} /> */}
-                        <div class="container">
+            <h2 style={{"textAlign":"center"}}>Our Team</h2>
+            <div className="about-row">
+                <div className="about-column">
+                    <div className="about-card">
+                        {/* <img src="" alt="Jane" style={{width:"100%"}} /> */}
+                        <div className="about-container">
                             <h2>Jose</h2>
-                            <p class="title">CEO & Founder</p>
-                            <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                            <p>jane@example.com</p>
-                            <p><button class="button">Contact</button></p>
+                            <p className="about-title">CEO & Founder</p>
+                            <p>He began as a  jr web developer.</p>
+                            <p>Originally from Costa Mesa, CA</p>
+                            <p>jose@gmail.com</p>
+                            <p><button className="about-button">Contact</button></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="card">
+            <div className="about-column">
+                <div className="about-card">
                     {/* <img src="/w3images/team2.jpg" alt="Mike" style={{"width":"100%"}} /> */}
-                    <div class="container">
+                    <div className="about-container">
                         <h2>Jennifer</h2>
-                        <p class="title">Art Director</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>mike@example.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <p className="about-title">Director</p>
+                        <p>Her loves for animals is far beyond.</p>
+                        <p>Originally from Rancho Cuca., CA</p>
+                        <p></p>
+                        <p>Jennifer@gmail.com</p>
+                        <p><button className="about-button">Contact</button></p>
                     </div>
                 </div>
             </div>
 
-            <div class="column">
-                <div class="card">
+            <div className="about-column">
+                <div className="about-card">
                     {/* <img src="/w3images/team3.jpg" alt="John" style={{"width":"100%"}} /> */}
-                    <div class="container">
+                    <div className="about-container">
                         <h2>Baden</h2>
-                        <p class="title">Designer</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                        <p>john@example.com</p>
-                        <p><button class="button">Contact</button></p>
+                        <p className="about-title">Just A Dog</p>
+                        <p>Baden loves to help by being there in the office</p>
+                        <p>Orginally from Beaumont, CA</p>
+                        <p>baden@gmail.com</p>
+                        <p><button className="about-button">Contact</button></p>
                     </div>
                 </div>
             </div>

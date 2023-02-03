@@ -45,7 +45,7 @@ function PostForm(props) {
     }
     return (
         <div>
-
+            {/* <h1>Edit Case</h1> */}
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

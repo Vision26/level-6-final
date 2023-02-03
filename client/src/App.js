@@ -4,7 +4,7 @@ import NavBar from './auth/NavBar'
 import Auth from './auth/Auth'
 import ProtectedRoute from './auth/ProtectedRoute'
 import Profile from './components/Profile'
-import Global from './components/Global'
+import Community from './components/Community'
 import About from './components/About'
 import Contact from './components/Contact'
 import './App.css'
@@ -32,10 +32,10 @@ function App() {
                     }
                 />
                 <Route
-                    path="/global"
+                    path="/community"
                     element={
                         <ProtectedRoute token={token} redirectTo="">
-                            <Global />
+                            <Community />
                         </ProtectedRoute>
                     }
                 />

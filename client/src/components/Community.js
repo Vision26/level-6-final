@@ -3,7 +3,7 @@ import { PostContext } from '../post/PostContext'
 import PostGlobal from '../global/PostGlobal'
 import { CommContext } from '../comments/CommContext'
 
-function Global() {
+function Community() {
     //grabbing postState data
     const { 
         globArr,
@@ -13,11 +13,11 @@ function Global() {
 const { commentState, addComment } = useContext( CommContext )
     return (
         <div className='global-container'>
-            <h1>Global Forum</h1>
-            <h4>Please be respectful and avoid using any profanity in the forum</h4>
-            <h5>This is a safe space for those mourning or grieving for their lost pets</h5>
-            <hr />
-            <br />
+            <h1>Community Forum</h1>
+            <h4>Please be respectful and avoid using any profanity in the forum.</h4>
+            <br/>
+            <h5>**This is a safe space for those mourning or grieving for their lost pets**</h5>
+            
             {globArr.map(glob => <PostGlobal
                 key={glob._id}
                 {...glob}
@@ -31,4 +31,4 @@ const { commentState, addComment } = useContext( CommContext )
     )
 }
 
-export default Global
+export default Community

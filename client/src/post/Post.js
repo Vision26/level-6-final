@@ -38,23 +38,24 @@ function Post(props) {
     return (
         <div className='post'>
             {/* this adds an open and close feature to posts */}
+            {/* <h1>Edit Case</h1> */}
             {!postToggle ?
                 <>
                     <img src={imgUrl} alt='images' width={300} />
                     <hr />
-            <br />
+                    <br />
                     name:<h2>{name}</h2>
-            <br />
+                    <br />
                     age:<h3>{age}</h3>
-            <br />
+                    <br />
                     color:<h3>{color}</h3>
-            <br />
+                    <br />
                     breed:<h3>{breed}</h3>
-            <br />
+                    <br />
                     description:<h3>{description}</h3>
-            <br />
+                    <br />
                     Loves:<h3>{hearts}</h3>
-            <br />
+                    <br />
                     {/* <button className='hrt-btn' onClick={() => updateHearts(user._id)}>Upvote</button> */}
                     <button className='delete-btn' onClick={() => deletePost(_id)}>Delete</button>
                     <button className='edit-btn' onClick={() => setPostToggle(prev => !prev)}>Edit</button>
@@ -62,17 +63,17 @@ function Post(props) {
                 :
                 <>
                     <PostForm
-                    key={name}
-                    name={name}
-                    age={age}
-                    color={color}
-                    breed={breed}
-                    description={description}
-                    imgUrl={imgUrl}
-                    hearts={hearts}
-                    id={_id}
-                    submit={edit}
-                    btnText='Submit'
+                        key={name}
+                        name={name}
+                        age={age}
+                        color={color}
+                        breed={breed}
+                        description={description}
+                        imgUrl={imgUrl}
+                        hearts={hearts}
+                        id={_id}
+                        submit={edit}
+                        btnText='Submit'
                     />
                     <button onClick={() => setPostToggle(prev => !prev)}>Close</button>
 
