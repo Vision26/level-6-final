@@ -20,6 +20,7 @@ const getPosts = id => {
 //useEffect to mount data into the array
 useEffect( () => {
 getPosts()
+globData()
 }, [] )
 //post POSTS
 const submitPost = newPost => {
@@ -34,7 +35,7 @@ const updatePost = (update, id) => {
     .catch(err => console.log(err))
 } 
 //updates hearts(likes)
-const updateHearts = (id) => {
+const updateHearts = id => {
     userAxios.put(`/final/hearts/${id}`)
     .then(res => setPostState(prev => prev.map(prevs => prevs._id !== id ? prevs : res.data)))
     .catch(err => console.log(err))
@@ -47,6 +48,16 @@ const delPost = id => {
     })))
     .catch(err => console.log(err))
 }
+// console.log(postState)
+//---------anything beyond is directed for global use-------
+const [ globArr, setGlobArr ] = useState([])
+//get data into globArr
+const globData = () => {
+    userAxios.get('/final/allposts')
+    .then(res => setGlobArr(res.data))
+    .catch(err => console.log(err))
+}
+// console.log(globArr)
     return(
         <PostContext.Provider value={{
             postState,
@@ -54,7 +65,9 @@ const delPost = id => {
             submitPost,
             updatePost,
             updateHearts,
-            delPost
+            delPost,
+            //global use
+            globArr
         }}>
             {props.children}
         </PostContext.Provider>

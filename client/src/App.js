@@ -5,6 +5,8 @@ import Auth from './auth/Auth'
 import ProtectedRoute from './auth/ProtectedRoute'
 import Profile from './components/Profile'
 import Global from './components/Global'
+import About from './components/About'
+import Contact from './components/Contact'
 import './App.css'
 import { AuthContext } from './auth/AuthContext'
 
@@ -20,6 +22,7 @@ function App() {
                     exact path="/"
                     element={token ? <Navigate to="/profile" /> : <Auth />}
                 />
+
                 <Route
                     path="/profile"
                     element={
@@ -33,6 +36,24 @@ function App() {
                     element={
                         <ProtectedRoute token={token} redirectTo="">
                             <Global />
+                        </ProtectedRoute>
+                    }
+                />
+
+                <Route
+                    path="/about"
+                    element={
+                        <ProtectedRoute token={token} redirectTo="">
+                            <About />
+                        </ProtectedRoute>
+                    }
+                />
+
+                <Route
+                    path="/contact"
+                    element={
+                        <ProtectedRoute token={token} redirectTo="">
+                            <Contact />
                         </ProtectedRoute>
                     }
                 />

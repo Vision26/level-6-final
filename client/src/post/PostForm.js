@@ -53,36 +53,42 @@ function PostForm(props) {
                     value={pstFrmState.name}
                     onChange={handleChange}
                     placeholder="Name" />
+            <br />
                 <input
                     type="number"
                     name="age"
                     value={pstFrmState.age}
                     onChange={handleChange}
                     placeholder="age" />
+                      <br />
                 <input
                     type="text"
                     name="color"
                     value={pstFrmState.color}
                     onChange={handleChange}
                     placeholder="Color" />
+                      <br />
                 <input
                     type="text"
                     name="breed"
                     value={pstFrmState.breed}
                     onChange={handleChange}
                     placeholder="Breed" />
+                      <br />
                 <input
                     type="text"
                     name="description"
                     value={pstFrmState.description}
                     onChange={handleChange}
                     placeholder="Description" />
+                      <br />
                 <input
                     type="text"
                     name="imgUrl"
                     value={pstFrmState.imgUrl}
                     onChange={handleChange}
                     placeholder="Image" />
+                      <br />
                 <button className='add-btn'>{btnText}</button>
             </form>
 

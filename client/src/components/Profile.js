@@ -4,6 +4,7 @@ import PostForm from '../post/PostForm'
 import { PostContext } from '../post/PostContext'
 import { AuthContext } from '../auth/AuthContext'
 import '../App.css'
+import { CommContext } from '../comments/CommContext'
 
 function Profile() {
     //postcontext
@@ -18,6 +19,8 @@ function Profile() {
 //authcontext
 const {user} = useContext(AuthContext)
 const { username } = user
+//get data from commentcontext
+// const { commentState, addComment } = useContext( CommContext )
     return (
         <div className='profile-container'>
             <h1>Welcome @{username}!</h1>
@@ -30,12 +33,17 @@ const { username } = user
             />
 
             {postState.map(post => <Post
-                key={post._id}
+                key={post.name}
                 edit={updatePost}
                 deletePost={delPost}
                 {...post}
                 getPosts={getPosts}
                 updateHearts={updateHearts}
+                //comment data being passed as props
+                // commentState={commentState}
+                // addComment={addComment}
+                // btnTexts='Submit Comment'
+
             />)}
         </div>
     )

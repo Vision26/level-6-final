@@ -7,6 +7,8 @@ const { logout, token } = props
         <div className='navbar'>
             <Link to="/profile">Profile</Link>
             <Link to="/global">Global</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
             <button onClick={logout}>Logout</button>
         </div>
     )

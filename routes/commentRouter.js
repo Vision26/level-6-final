@@ -2,7 +2,6 @@ const express = require('express')
 const commentRouter = express.Router()
 const Post = require('../models/post.js')
 const mongoose = require('mongoose')
-const postRouter = require('./postRouter.js')
 
 //posts comment by post id
 commentRouter.post('/:postId', (req, res, next) => {
@@ -47,15 +46,15 @@ commentRouter.get('/user/:userId', (req, res, next) => {
     )
 })
 //delete comment from a post using rndmUserId
-// commentRouter.delete('/delete/:commentId', (req, res, next) => {
+// commentRouter.delete('/delete/:rndmId', (req, res, next) => {
 //     Post.findOneAndDelete(
-//         {_id: req.params.commentId, comments: comments.comment._id},
+//         {_id: req.params.rndmId, user: req.auth._id, rndmUser: req.comments.comment.rndmUser},
 //         (err, del) => {
 //             if(err){
 //                 res.status(500)
 //                 return next(err)
 //             }
-//             return res.status(200).send(` Deleted.`)
+//             return res.status(200).send(`Deleted ${del}`)
 //         }
 //     )
 // })

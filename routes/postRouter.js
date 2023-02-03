@@ -15,9 +15,9 @@ postRouter.post('/newpost', (req, res, next) => {
     })
 })
 //update- updates hearts number
-postRouter.put('/hearts/:heartId', (req, res, next) => {
+postRouter.put('/hearts/:userId', (req, res, next) => {
     Post.findOneAndUpdate(
-        {_id: req.params.heartId},
+        {_id: req.params.userId, user: req.auth._id},
         {$inc:{hearts:1}},
         {new:true},
         (err, update) => {

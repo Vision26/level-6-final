@@ -1,126 +1,257 @@
-*{
-    box-sizing: border-box;
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
 }
 
-.app{
-    /* background-color: rgba(179, 137, 137, 0.6); */
-    background-image: url('https://daily.jstor.org/wp-content/uploads/2022/06/how_street_dogs_spend_their_days_1050x700.jpg');
-   height:100%;
-   width:100%;
+.app {
+  /* background-color: rgba(179, 137, 137, 0.6); */
+  /* background-image: url('https://daily.jstor.org/wp-content/uploads/2022/06/how_street_dogs_spend_their_days_1050x700.jpg'); */
+  height: 100%;
+  width: 100%;
 }
 
-.auth-container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
+.auth-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.auth-container > h1 {
-    font-size: 2em;
-    margin: 24px;
-  }
-  
-  .auth-container > p {
-    margin: 16px;
-    text-decoration: underline;
-  }
-  
-  .auth-container > form {
-    border: 1px solid #3339;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #aaa9;
-  
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .auth-container > form > input {
-    margin: 16px 8px;
-    padding: 8px;
-    border-radius: 4px;
-  }
-  
-  .auth-container > form > button {
-    margin: 16px 8px;
-    padding: 8px;
-    border-radius: 4px;
-  }
-
-.navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 40px;
-    background-color: black;
+.auth-container>h1 {
+  font-size: 2em;
+  margin: 24px;
 }
 
-.profile-container{
-    display:flex;
-    flex-direction: column;
-    margin: 0 32px;
+.auth-container>p {
+  margin: 16px;
+  text-decoration: underline;
 }
 
-.delete-btn{
+.auth-container>form {
+  border: 1px solid #3339;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #aaa9;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container>form>input {
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.auth-container>form>button {
+  margin: 16px 8px;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  background-color: black;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+}
+
+.delete-btn {
   background-color: maroon;
   font-size: 16;
 }
 
-.edit-btn{
-  background-color:darkslategrey;
+.edit-btn {
+  background-color: darkslategrey;
   color: whitesmoke;
 }
 
-.add-btn{
+.add-btn {
   background-color: cadetblue;
 }
 
-.post{
+.global-container {
+  border: 1px solid rgb(182, 62, 62);
+  padding: 10px;
+  margin: 5px;
+}
+
+.postglobal-container {
   border: 1px solid #333;
   padding: 10px;
   margin: 5px;
 }
 
-.hrt-btn{
+.post {
+  border: 1px solid #333;
+  padding: 10px;
+  margin: 5px;
+}
+
+.hrt-btn {
   background-color: rgb(246, 185, 185);
   font-size: 16;
 }
 
-.global-container{
-    border: 1px solid rgb(182, 62, 62);
-    padding: 10px;
-    margin: 5px;
-}
-
-h1{
-  margin: 5px;
-  color:rgb(38, 78, 81);
-}
-
-p{
+.global-container {
+  border: 1px solid rgb(182, 62, 62);
+  padding: 10px;
   margin: 5px;
 }
 
-form{
+h1 {
+  margin: 5px;
+  color: rgb(38, 78, 81);
+}
+
+p {
+  margin: 5px;
+}
+
+form {
   border: 1px solid #333;
   padding: 10px;
   margin: 5px;
 }
 
-input{
+input[type="text"] {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #333;
   border-radius: 8px;
-  margin: 5px;
+  display: block;
+  margin: 0 auto;
+  /* margin: 5px; */
 }
 
-button{
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  /* margin: 5px; */
+}
+
+button {
   padding: 5px;
   border-radius: 4px;
   font-size: 16px;
 }
+
+.removeDots {
+  list-style-type: none;
+}
+
+/* ---------anything beyond this point is for About.js--- */
+.about {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: antiquewhite;
+  color:#555;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: inline-block;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: antiquewhite;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* ------------------------------------my own */
+/* .about-container{
+  background-color:antiquewhite;
+}
+
+.about-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+} */
+
+/* .about-img-container{
+  background-color:antiquewhite;
+} */
+
+
+ /* .about-p{ */
+  /* box-sizing: border-box;
+  border: 1px solid #333;
+  border-radius: 8px; */
+  /* background-color: antiquewhite; */
+/* }  */
+
+/* .about-p > p{
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight:lighter;
+} */
+
+/* ---------anything beyond this point is for About.js--- */
