@@ -41,24 +41,23 @@ function Post(props) {
             {/* <h1>Edit Case</h1> */}
             {!postToggle ?
                 <>
-                    <img src={imgUrl} alt='images' width={300} />
-                    <hr />
-                    <br />
-                    name:<h2>{name}</h2>
-                    <br />
-                    age:<h3>{age}</h3>
-                    <br />
-                    color:<h3>{color}</h3>
-                    <br />
-                    breed:<h3>{breed}</h3>
-                    <br />
-                    description:<h3>{description}</h3>
-                    <br />
+                    <div className="profile-card">
+                    <img src={imgUrl} alt='images' style={{"width":"50%"}} />
+                    <h1>{name}</h1>
+                    <h6>age:</h6><p>{age}</p>
+                    color:<p>{color}</p>
+                    breed:<p>{breed}</p>
+                    description:<p>{description}</p>
                     Loves:<h3>{hearts}</h3>
-                    <br />
-                    {/* <button className='hrt-btn' onClick={() => updateHearts(user._id)}>Upvote</button> */}
-                    <button className='delete-btn' onClick={() => deletePost(_id)}>Delete</button>
-                    <button className='edit-btn' onClick={() => setPostToggle(prev => !prev)}>Edit</button>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                    <button className='post-button' onClick={() => updateHearts(user._id)}>Upvote</button>
+                    <button className='post-button' onClick={() => deletePost(_id)}>Delete</button>
+                    <button className='post-button' onClick={() => setPostToggle(prev => !prev)}>Edit</button>
+                    </div>
+
                 </>
                 :
                 <>

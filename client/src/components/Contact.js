@@ -10,7 +10,7 @@ function Contact(){
         </div>
         <div className="contact-row">
           <div className="contact-column">
-            <img src="https://images.ctfassets.net/7ybtdzdgha5d/2Jp3xsME6sAfTQDt3J1C5H/75043a3e1e934443dcc1ce8cc905ca26/constipated_dog.png?w=599&h=599&q=65&fm=png" style={{"width":"100%", "height":"532px"}}/>
+            <img src="https://images.ctfassets.net/7ybtdzdgha5d/2Jp3xsME6sAfTQDt3J1C5H/75043a3e1e934443dcc1ce8cc905ca26/constipated_dog.png?w=599&h=599&q=65&fm=png" style={{"width":"100%", "height":"50%"}}/>
           </div>
           <div className="contact-column">
             <form action="/action_page.php">
