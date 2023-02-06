@@ -5,7 +5,7 @@ function Footer() {
     return (
         <div className='footer-content'>
             <h2>Doggy Found</h2>
-            <p>Foolish Developer —  source code.</p>
+            <p>J A H —  source code.</p>
             <ul className="socials">
                 <li><a href="#"><i className="fa fa-facebook">Facebook</i></a></li >
                 <li><a href="#"><i className="fa fa-twitter">Twitter</i></a ></li>
@@ -14,7 +14,7 @@ function Footer() {
                 <li><a href="#"><i className="fa fa-linkedin-square">Linkedin</i></a ></li >
             </ul >
             <div className="footer-bottom">
-                <p>copyright &copy;2021 <a href="#">foolishdeveloper</a>  </p>
+                <p>copyright &copy;2023 <a href="#">J A H developer</a>  </p>
 
             </div>
 
