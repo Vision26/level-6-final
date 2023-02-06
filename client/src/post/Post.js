@@ -44,18 +44,15 @@ function Post(props) {
                     <div className="profile-card">
                     <img src={imgUrl} alt='images' style={{"width":"50%"}} />
                     <h1>{name}</h1>
-                    <h6>age:</h6><p>{age}</p>
-                    color:<p>{color}</p>
-                    breed:<p>{breed}</p>
-                    description:<p>{description}</p>
-                    Loves:<h3>{hearts}</h3>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                    <button className='post-button' onClick={() => updateHearts(user._id)}>Upvote</button>
-                    <button className='post-button' onClick={() => deletePost(_id)}>Delete</button>
-                    <button className='post-button' onClick={() => setPostToggle(prev => !prev)}>Edit</button>
+                    <h4>Age:</h4><p>{age}</p>
+                    <h4>Color:</h4><p>{color}</p>
+                    <h4>Breed:</h4><p>{breed}</p>
+                    <h4>Description:</h4><p>{description}</p>
+                    <h4>Hearts:</h4><h3>{hearts}</h3>
+
+                    {/* <button className='post-button' onClick={() => updateHearts(user._id)}>Upvote</button> */}
+                    <button className='delete-btn' onClick={() => deletePost(_id)}>Delete</button>
+                    <button className='edit-btn' onClick={() => setPostToggle(prev => !prev)}>Edit</button>
                     </div>
 
                 </>

@@ -9,6 +9,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import './App.css'
 import { AuthContext } from './auth/AuthContext'
+import Footer from './Footer'
 
 function App() {
     const { token, logout } = useContext(AuthContext)
@@ -59,6 +60,7 @@ function App() {
                 />
 
             </Routes>
+{/* <Footer /> */}
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { PostContext } from '../post/PostContext'
 import PostGlobal from '../global/PostGlobal'
 import { CommContext } from '../comments/CommContext'
+import Footer from '../Footer'
 
 function Community() {
     //grabbing postState data
@@ -27,6 +28,7 @@ const { commentState, addComment } = useContext( CommContext )
                 addComment={addComment}
                 btnTexts='Submit Comment'
             />)}
+            <Footer />
         </div>
     )
 }

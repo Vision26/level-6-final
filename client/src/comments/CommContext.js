@@ -14,7 +14,8 @@ const [ commentState, setCommentState ] = useState([])
 //get comments
 const getComment = id => {
     userAxios.get(`/final/comment/user/${id}`)
-    .then(res => setCommentState(res.data))
+    .then(res => 
+        setCommentState(res.data))
     .catch(err => console.log(err))
 }
 //useEffect to mount getComment
